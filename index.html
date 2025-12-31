@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For You, My </title>
+    <title>For You, My Love</title>
     <style>
         * {
             margin: 0;
@@ -701,7 +701,14 @@ As this New Year begins, I Just Want you to know How Grateful I am for You. From
                 modal.style.display = 'none';
             }
         });
+
+        // Force audio play on page load
+        window.addEventListener('load', () => {
+            const audio = document.querySelector('audio');
+            if (audio) {
+                audio.play().catch(e => console.log('Audio autoplay blocked:', e));
+            }
+        });
     </script>
 </body>
-
 </html>
